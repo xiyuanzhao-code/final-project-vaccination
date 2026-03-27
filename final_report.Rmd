@@ -1,0 +1,32 @@
+---
+title: "final_project_xy"
+author: "Xiyuan ZHAO"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(knitr)
+```
+
+## Research Question
+
+This report examines how adolescent vaccination coverage varies across vaccine types.
+
+## Summary Table
+
+```{r}
+summary_table <- readRDS("output/summary_table.rds")
+kable(summary_table, digits = 2)
+```
+
+## Figure
+
+```{r, echo=FALSE, out.width="80%"}
+knitr::include_graphics("output/vaccination_plot.png")
+```
+
+## Conclusion
+
+Vaccination coverage varies across vaccine types, suggesting differences in uptake across recommended adolescent vaccines.
