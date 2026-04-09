@@ -1,5 +1,8 @@
 all: final_report.html
 
+install:
+	Rscript -e "renv::restore(prompt = FALSE)"
+
 output/cleaned_data.rds: code/00_load_clean_data.R data/vaccination_coverage.csv
 	Rscript code/00_load_clean_data.R
 
