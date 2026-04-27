@@ -18,7 +18,30 @@ This project analyzes adolescent vaccination coverage in the United States using
 
 ## How to Synchronize the Package Environment
 
-First restore the project package environment with:
-
 ```bash
 make install
+```
+
+## How to Build the Report Locally
+
+```bash
+make
+```
+
+## Docker Image
+
+The Docker image is publicly available on DockerHub:
+
+https://hub.docker.com/r/xiyuanzz/final-project
+
+## How to Build the Docker Image Locally
+
+```bash
+docker build -t final-project .
+```
+
+## How to Run the Automated Docker Report
+
+```bash
+make docker-report
+```

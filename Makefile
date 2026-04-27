@@ -14,3 +14,9 @@ output/vaccination_plot.png: code/02_make_figure.R output/cleaned_data.rds
 
 final_report.html: final_report.Rmd code/03_render_report.R output/summary_table.rds output/vaccination_plot.png
 	Rscript code/03_render_report.R
+
+docker-report:
+	mkdir -p report
+	docker run --rm \
+		-v $(PWD)/report:/home/rstudio/project/report \
+		xiyuanzhao-code/final-project
