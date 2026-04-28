@@ -19,4 +19,4 @@ docker-report:
 	mkdir -p report
 	docker run --rm \
 		-v $(PWD)/report:/home/rstudio/project/report \
-		xiyuanzhao-code/final-project
+		xiyuanzz/final-project
